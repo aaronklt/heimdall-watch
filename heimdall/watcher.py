@@ -143,8 +143,8 @@ def main() -> None:
     args = ap.parse_args()
     if args.ping:
         n = len(get_universe())
-        telegram.send(f"🛡️ <b>Heimdall — veille opérationnelle</b>
-Je surveille {n} cryptos et les news toutes les 5 minutes.")
+        telegram.send(f"🛡️ <b>Heimdall — veille opérationnelle</b>\n"
+                      f"Je surveille {n} cryptos et les news toutes les 5 minutes.")
         return
     state = load_state()
     loop_index = 0
