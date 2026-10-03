@@ -139,14 +139,22 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--once", action="store_true")
     ap.add_argument("--dry", action="store_true")
+    ap.add_argument("--ping", action="store_true", help="envoie un message de test et s'arrête")
     args = ap.parse_args()
+    if args.ping:
+        n = len(get_universe())
+        telegram.send(f"🛡️ <b>Heimdall — veille opérationnelle</b>
+Je surveille {n} cryptos et les news toutes les 5 minutes.")
+        return
     state = load_state()
     loop_index = 0
     while True:
         try:
             run_once(state, loop_index, args.dry)
         except Exception:
-            traceback.print_exc()  # une source en panne ne doit pas arrêter la veille
+            if args.once:
+                raise  # passage unique (GitHub Actions) : l'erreur doit se voir (croix rouge)
+            traceback.print_exc()  # en continu : une source en panne ne doit pas arrêter la veille
         if args.once:
             break
         loop_index += 1

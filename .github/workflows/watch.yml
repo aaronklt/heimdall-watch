@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/5 * * * *"  # minimum autorisé par GitHub ; les exécutions peuvent être décalées de quelques minutes
   workflow_dispatch:       # bouton "Run workflow" pour tester à la main
+    inputs:
+      ping:
+        description: "Envoyer un message de test sur Telegram"
+        type: boolean
+        default: false
 
 permissions:
   contents: write          # pour enregistrer l'état de la veille dans le dépôt
@@ -31,7 +36,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
-        run: python -m heimdall.watcher --once
+        run: python -m heimdall.watcher --once ${{ inputs.ping && '--ping' || '' }}
 
       - name: Enregistrer l'état (news déjà vues, délais entre alertes)
         run: |
