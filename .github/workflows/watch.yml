@@ -1,0 +1,42 @@
+name: Veille Heimdall
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # minimum autorisé par GitHub ; les exécutions peuvent être décalées de quelques minutes
+  workflow_dispatch:       # bouton "Run workflow" pour tester à la main
+
+permissions:
+  contents: write          # pour enregistrer l'état de la veille dans le dépôt
+
+concurrency:
+  group: veille
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Passage de veille
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+        run: python -m heimdall.watcher --once
+
+      - name: Enregistrer l'état (news déjà vues, délais entre alertes)
+        run: |
+          git config user.name "heimdall-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/state data/cache
+          git diff --cached --quiet || git commit -m "État de la veille" -q
+          git pull --rebase -q && git push -q
