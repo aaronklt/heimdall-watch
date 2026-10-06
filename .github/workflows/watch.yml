@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   watch:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # version figée : ubuntu-latest passe à Ubuntu 26 le 19 octobre
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
