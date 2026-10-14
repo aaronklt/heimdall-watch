@@ -1,5 +1,5 @@
 {
- "built_at": 1791856928.02481,
+ "built_at": 1791943591.8082016,
  "coins": [
   {
    "id": "bitcoin",
@@ -92,34 +92,34 @@
    "rank": 21
   },
   {
-   "id": "bitcoin-cash",
-   "symbol": "BCH",
-   "name": "Bitcoin Cash",
-   "rank": 22
-  },
-  {
    "id": "bitway",
    "symbol": "BTW",
    "name": "Bitway",
+   "rank": 22
+  },
+  {
+   "id": "bitcoin-cash",
+   "symbol": "BCH",
+   "name": "Bitcoin Cash",
    "rank": 23
   },
   {
    "id": "litecoin",
    "symbol": "LTC",
    "name": "Litecoin",
-   "rank": 26
+   "rank": 25
+  },
+  {
+   "id": "uniswap",
+   "symbol": "UNI",
+   "name": "Uniswap",
+   "rank": 27
   },
   {
    "id": "avalanche-2",
    "symbol": "AVAX",
    "name": "Avalanche",
    "rank": 28
-  },
-  {
-   "id": "uniswap",
-   "symbol": "UNI",
-   "name": "Uniswap",
-   "rank": 29
   },
   {
    "id": "sui",
@@ -140,16 +140,16 @@
    "rank": 33
   },
   {
-   "id": "quant-network",
-   "symbol": "QNT",
-   "name": "Quant",
-   "rank": 35
-  },
-  {
    "id": "bittensor",
    "symbol": "TAO",
    "name": "Bittensor",
-   "rank": 37
+   "rank": 35
+  },
+  {
+   "id": "quant-network",
+   "symbol": "QNT",
+   "name": "Quant",
+   "rank": 36
   },
   {
    "id": "shiba-inu",
@@ -179,36 +179,36 @@
    "id": "aave",
    "symbol": "AAVE",
    "name": "Aave",
-   "rank": 44
-  },
-  {
-   "id": "ondo-finance",
-   "symbol": "ONDO",
-   "name": "Ondo",
-   "rank": 47
+   "rank": 43
   },
   {
    "id": "pump-fun",
    "symbol": "PUMP",
    "name": "Pump.fun",
-   "rank": 48
+   "rank": 46
   },
   {
-   "id": "memecore",
-   "symbol": "M",
-   "name": "MemeCore",
-   "rank": 50
+   "id": "ondo-finance",
+   "symbol": "ONDO",
+   "name": "Ondo",
+   "rank": 48
   },
   {
    "id": "polkadot",
    "symbol": "DOT",
    "name": "Polkadot",
-   "rank": 51
+   "rank": 50
   },
   {
    "id": "worldcoin-wld",
    "symbol": "WLD",
    "name": "Worldcoin",
+   "rank": 51
+  },
+  {
+   "id": "memecore",
+   "symbol": "M",
+   "name": "MemeCore",
    "rank": 52
   },
   {
@@ -221,37 +221,37 @@
    "id": "world-liberty-financial",
    "symbol": "WLFI",
    "name": "World Liberty Financial",
-   "rank": 56
+   "rank": 54
   },
   {
    "id": "sky",
    "symbol": "SKY",
    "name": "Sky",
-   "rank": 57
+   "rank": 56
   },
   {
    "id": "mantle",
    "symbol": "MNT",
    "name": "Mantle",
-   "rank": 59
-  },
-  {
-   "id": "internet-computer",
-   "symbol": "ICP",
-   "name": "Internet Computer",
-   "rank": 60
+   "rank": 58
   },
   {
    "id": "pepe",
    "symbol": "PEPE",
    "name": "Pepe",
+   "rank": 60
+  },
+  {
+   "id": "internet-computer",
+   "symbol": "ICP",
+   "name": "Internet Computer",
    "rank": 61
   },
   {
    "id": "morpho",
    "symbol": "MORPHO",
    "name": "Morpho",
-   "rank": 63
+   "rank": 62
   },
   {
    "id": "htx-dao",
@@ -266,16 +266,16 @@
    "rank": 66
   },
   {
+   "id": "arbitrum",
+   "symbol": "ARB",
+   "name": "Arbitrum",
+   "rank": 68
+  },
+  {
    "id": "ethereum-classic",
    "symbol": "ETC",
    "name": "Ethereum Classic",
    "rank": 69
-  },
-  {
-   "id": "arbitrum",
-   "symbol": "ARB",
-   "name": "Arbitrum",
-   "rank": 70
   },
   {
    "id": "just",
@@ -290,64 +290,64 @@
    "rank": 72
   },
   {
+   "id": "venice-token",
+   "symbol": "VVV",
+   "name": "Venice Token",
+   "rank": 73
+  },
+  {
    "id": "jupiter-exchange-solana",
    "symbol": "JUP",
    "name": "Jupiter",
    "rank": 74
   },
   {
-   "id": "render-token",
-   "symbol": "RENDER",
-   "name": "Render",
-   "rank": 75
-  },
-  {
    "id": "algorand",
    "symbol": "ALGO",
    "name": "Algorand",
-   "rank": 76
-  },
-  {
-   "id": "venice-token",
-   "symbol": "VVV",
-   "name": "Venice Token",
-   "rank": 77
-  },
-  {
-   "id": "polygon-ecosystem-token",
-   "symbol": "POL",
-   "name": "POL (ex-MATIC)",
-   "rank": 78
+   "rank": 75
   },
   {
    "id": "kaspa",
    "symbol": "KAS",
    "name": "Kaspa",
-   "rank": 79
+   "rank": 76
   },
   {
-   "id": "blockchain-capital",
-   "symbol": "BCAP",
-   "name": "Blockchain Capital",
-   "rank": 80
+   "id": "polygon-ecosystem-token",
+   "symbol": "POL",
+   "name": "POL (ex-MATIC)",
+   "rank": 77
+  },
+  {
+   "id": "render-token",
+   "symbol": "RENDER",
+   "name": "Render",
+   "rank": 78
   },
   {
    "id": "cosmos",
    "symbol": "ATOM",
    "name": "Cosmos Hub",
-   "rank": 81
+   "rank": 80
   },
   {
    "id": "filecoin",
    "symbol": "FIL",
    "name": "Filecoin",
+   "rank": 81
+  },
+  {
+   "id": "blockchain-capital",
+   "symbol": "BCAP",
+   "name": "Blockchain Capital",
    "rank": 82
   },
   {
    "id": "aerodrome-finance",
    "symbol": "AERO",
    "name": "Aerodrome Finance",
-   "rank": 84
+   "rank": 83
   },
   {
    "id": "lighter",
@@ -356,184 +356,196 @@
    "rank": 85
   },
   {
-   "id": "layerzero",
-   "symbol": "ZRO",
-   "name": "LayerZero",
-   "rank": 86
-  },
-  {
    "id": "nexo",
    "symbol": "NEXO",
    "name": "NEXO",
-   "rank": 87
-  },
-  {
-   "id": "midnight-3",
-   "symbol": "NIGHT",
-   "name": "Midnight",
-   "rank": 91
+   "rank": 86
   },
   {
    "id": "injective-protocol",
    "symbol": "INJ",
    "name": "Injective",
+   "rank": 87
+  },
+  {
+   "id": "layerzero",
+   "symbol": "ZRO",
+   "name": "LayerZero",
+   "rank": 90
+  },
+  {
+   "id": "midnight-3",
+   "symbol": "NIGHT",
+   "name": "Midnight",
    "rank": 92
-  },
-  {
-   "id": "stable-2",
-   "symbol": "STABLE",
-   "name": "​​Stable",
-   "rank": 94
-  },
-  {
-   "id": "pancakeswap-token",
-   "symbol": "CAKE",
-   "name": "PancakeSwap",
-   "rank": 93
-  },
-  {
-   "id": "beldex",
-   "symbol": "BDX",
-   "name": "Beldex",
-   "rank": 95
   },
   {
    "id": "aptos",
    "symbol": "APT",
    "name": "Aptos",
-   "rank": 96
+   "rank": 93
   },
   {
-   "id": "starknet",
-   "symbol": "STRK",
-   "name": "Starknet",
-   "rank": 99
+   "id": "pancakeswap-token",
+   "symbol": "CAKE",
+   "name": "PancakeSwap",
+   "rank": 94
+  },
+  {
+   "id": "stable-2",
+   "symbol": "STABLE",
+   "name": "​​Stable",
+   "rank": 95
   },
   {
    "id": "xdce-crowd-sale",
    "symbol": "XDC",
    "name": "XDC Network",
-   "rank": 98
+   "rank": 97
   },
   {
-   "id": "pyth-network",
-   "symbol": "PYTH",
-   "name": "Pyth Network",
-   "rank": 100
+   "id": "beldex",
+   "symbol": "BDX",
+   "name": "Beldex",
+   "rank": 98
   },
   {
    "id": "ether-fi",
    "symbol": "ETHFI",
    "name": "Ether.fi",
-   "rank": 101
+   "rank": 99
   },
   {
    "id": "dash",
    "symbol": "DASH",
    "name": "Dash",
-   "rank": 103
+   "rank": 100
   },
   {
    "id": "vechain",
    "symbol": "VET",
    "name": "VeChain",
+   "rank": 102
+  },
+  {
+   "id": "starknet",
+   "symbol": "STRK",
+   "name": "Starknet",
+   "rank": 103
+  },
+  {
+   "id": "pyth-network",
+   "symbol": "PYTH",
+   "name": "Pyth Network",
    "rank": 104
   },
   {
    "id": "flare-networks",
    "symbol": "FLR",
    "name": "Flare",
-   "rank": 105
-  },
-  {
-   "id": "raydium",
-   "symbol": "RAY",
-   "name": "Raydium",
-   "rank": 107
-  },
-  {
-   "id": "bianrensheng",
-   "symbol": "币安人生",
-   "name": "币安人生 (BinanceLife)",
-   "rank": 108
-  },
-  {
-   "id": "curve-dao-token",
-   "symbol": "CRV",
-   "name": "Curve DAO",
-   "rank": 109
-  },
-  {
-   "id": "grass",
-   "symbol": "GRASS",
-   "name": "Grass",
-   "rank": 114
+   "rank": 106
   },
   {
    "id": "akedo",
    "symbol": "AKE",
    "name": "Akedo",
-   "rank": 113
+   "rank": 108
+  },
+  {
+   "id": "raydium",
+   "symbol": "RAY",
+   "name": "Raydium",
+   "rank": 110
   },
   {
    "id": "official-trump",
    "symbol": "TRUMP",
    "name": "Official Trump",
+   "rank": 112
+  },
+  {
+   "id": "curve-dao-token",
+   "symbol": "CRV",
+   "name": "Curve DAO",
+   "rank": 113
+  },
+  {
+   "id": "bianrensheng",
+   "symbol": "币安人生",
+   "name": "币安人生 (BinanceLife)",
    "rank": 115
+  },
+  {
+   "id": "grass",
+   "symbol": "GRASS",
+   "name": "Grass",
+   "rank": 116
   },
   {
    "id": "fetch-ai",
    "symbol": "FET",
    "name": "Artificial Superintelligence Alliance",
-   "rank": 120
+   "rank": 117
   },
   {
    "id": "pudgy-penguins",
    "symbol": "PENGU",
    "name": "Pudgy Penguins",
-   "rank": 121
+   "rank": 118
   },
   {
    "id": "virtual-protocol",
    "symbol": "VIRTUAL",
    "name": "Virtuals Protocol",
+   "rank": 122
+  },
+  {
+   "id": "derive",
+   "symbol": "DRV",
+   "name": "Derive",
    "rank": 124
   },
   {
    "id": "sei-network",
    "symbol": "SEI",
    "name": "Sei",
-   "rank": 125
-  },
-  {
-   "id": "derive",
-   "symbol": "DRV",
-   "name": "Derive",
    "rank": 126
-  },
-  {
-   "id": "falcon-finance-ff",
-   "symbol": "FF",
-   "name": "Falcon Finance",
-   "rank": 128
-  },
-  {
-   "id": "bittorrent",
-   "symbol": "BTT",
-   "name": "BitTorrent",
-   "rank": 129
-  },
-  {
-   "id": "plasma",
-   "symbol": "XPL",
-   "name": "Plasma",
-   "rank": 130
   },
   {
    "id": "pendle",
    "symbol": "PENDLE",
    "name": "Pendle",
+   "rank": 127
+  },
+  {
+   "id": "plasma",
+   "symbol": "XPL",
+   "name": "Plasma",
+   "rank": 128
+  },
+  {
+   "id": "falcon-finance-ff",
+   "symbol": "FF",
+   "name": "Falcon Finance",
+   "rank": 129
+  },
+  {
+   "id": "optimism",
+   "symbol": "OP",
+   "name": "Optimism",
+   "rank": 131
+  },
+  {
+   "id": "bittorrent",
+   "symbol": "BTT",
+   "name": "BitTorrent",
    "rank": 132
+  },
+  {
+   "id": "lido-dao",
+   "symbol": "LDO",
+   "name": "Lido DAO",
+   "rank": 133
   },
   {
    "id": "tezos",
@@ -542,22 +554,16 @@
    "rank": 134
   },
   {
-   "id": "pieverse",
-   "symbol": "PIEVERSE",
-   "name": "Pieverse",
-   "rank": 136
-  },
-  {
    "id": "spx6900",
    "symbol": "SPX",
    "name": "SPX6900",
-   "rank": 137
+   "rank": 136
   },
   {
-   "id": "lido-dao",
-   "symbol": "LDO",
-   "name": "Lido DAO",
-   "rank": 138
+   "id": "pieverse",
+   "symbol": "PIEVERSE",
+   "name": "Pieverse",
+   "rank": 137
   },
   {
    "id": "sun-token",
@@ -566,40 +572,34 @@
    "rank": 143
   },
   {
+   "id": "kite-2",
+   "symbol": "KITE",
+   "name": "Kite",
+   "rank": 145
+  },
+  {
    "id": "unibase",
    "symbol": "UB",
    "name": "Unibase",
-   "rank": 145
+   "rank": 146
   },
   {
    "id": "gnosis",
    "symbol": "GNO",
    "name": "Gnosis",
-   "rank": 148
-  },
-  {
-   "id": "optimism",
-   "symbol": "OP",
-   "name": "Optimism",
    "rank": 147
   },
   {
-   "id": "kite-2",
-   "symbol": "KITE",
-   "name": "Kite",
-   "rank": 151
+   "id": "basic-attention-token",
+   "symbol": "BAT",
+   "name": "Basic Attention",
+   "rank": 148
   },
   {
    "id": "monad",
    "symbol": "MON",
    "name": "Monad",
    "rank": 152
-  },
-  {
-   "id": "syrup",
-   "symbol": "SYRUP",
-   "name": "Maple Finance",
-   "rank": 154
   }
  ]
 }
