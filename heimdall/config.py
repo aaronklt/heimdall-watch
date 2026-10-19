@@ -74,3 +74,9 @@ PRICE_ALERT_1H_TOP20 = 4.0
 PRICE_ALERT_1H_OTHERS = 7.0
 # Une même crypto ne déclenche pas deux alertes prix en moins de X heures.
 PRICE_ALERT_COOLDOWN_H = 6
+# Mouvements progressifs sur 24h (%), que l'alerte 1h ne voit pas (ex. INJ +26 % le 16 octobre sans alerte).
+PRICE_ALERT_24H_TOP20 = 8.0
+PRICE_ALERT_24H_OTHERS = 18.0
+PRICE_ALERT_24H_COOLDOWN_H = 12
+# Bilan de santé quotidien (silencieux) envoyé à cette heure UTC : 6 h UTC = 8 h à Paris en été, 7 h en hiver.
+HEARTBEAT_HOUR_UTC = 6

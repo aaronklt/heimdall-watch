@@ -18,13 +18,16 @@ def _clean(text: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
-def fetch_news(since_ts: float = 0, max_per_feed: int = 40) -> list[dict]:
-    items = []
+def fetch_news(since_ts: float = 0, max_per_feed: int = 40, with_failures: bool = False):
+    items, failed = [], []
     for source, url in config.RSS_FEEDS.items():
         try:
             feed = feedparser.parse(get_text(url))
+            if not feed.entries:
+                raise ValueError("flux vide")
         except Exception as e:
             print(f"[news] {source} indisponible : {e}")
+            failed.append(source)
             continue
         for e in feed.entries[:max_per_feed]:
             parsed = e.get("published_parsed") or e.get("updated_parsed")
@@ -39,7 +42,7 @@ def fetch_news(since_ts: float = 0, max_per_feed: int = 40) -> list[dict]:
                 "published_ts": ts,
             })
     items.sort(key=lambda x: x["published_ts"], reverse=True)
-    return items
+    return (items, failed) if with_failures else items
 
 
 # Noms qui sont aussi des mots anglais courants : on ne les cherche que sous la forme "$SYMBOLE".
