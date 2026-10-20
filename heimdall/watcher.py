@@ -24,6 +24,9 @@ PRICES_FILE = config.DATA_DIR / "prices" / "history.json"
 LOOP_SECONDS = 300
 PRICE_EVERY_N_LOOPS = 2  # prix toutes les 10 min : reste dans le quota gratuit CoinGecko
 NEWS_COOLDOWN_H = 3
+# Un raté isolé d'API (CoinGecko qui répond 429 ou 5xx) ne doit pas mettre le passage en échec ni t'envoyer un
+# e-mail : le passage n'échoue (croix rouge) qu'après ce nombre de relevés de prix ratés d'affilée (30 min).
+MAX_CONSECUTIVE_PRICE_FAILURES = 6
 
 KEYWORD_PATTERNS = {
     level: [(kw, re.compile(rf"\b{re.escape(kw)}\b")) for kw in kws]
@@ -224,7 +227,7 @@ def heartbeat_message(state: dict) -> str:
              f"Prix de BTC rafraîchi à {refreshes} relevés sur {checks}"]
     lines.append(f"⚠️ Sources en panne : {', '.join(down)}" if down else "Sources de news : toutes répondent")
     if errors:
-        lines.append(f"⚠️ Passages en erreur : {errors}")
+        lines.append(f"⚠️ Relevés ou envois ratés (rattrapés au passage suivant) : {errors}")
     return "\n".join(lines)
 
 
@@ -235,8 +238,16 @@ def run_once(state: dict, loop_index: int, dry: bool) -> None:
     before = copy.deepcopy(state)
     universe = get_universe()
     alerts = check_news(state, universe)
+    price_error = None
     if loop_index % PRICE_EVERY_N_LOOPS == 0:
-        alerts += check_prices(state, universe)
+        try:
+            alerts += check_prices(state, universe)
+            state["price_failures"] = 0
+        except Exception as e:  # le passage continue : les news sont traitées et l'état enregistré
+            price_error = e
+            state["price_failures"] = state.get("price_failures", 0) + 1
+            h["errors"] += 1
+            print(f"[watcher] relevé de prix raté ({state['price_failures']} d'affilée) : {e}")
     messages = []
     if alerts:
         messages.append(("🛡️ <b>Heimdall — Alerte</b>\n\n" + "\n\n".join(format_alert(a) for a in alerts), False))
@@ -260,6 +271,8 @@ def run_once(state: dict, loop_index: int, dry: bool) -> None:
     _health(state)["alerts"] += len(alerts)
     save_state(state)
     fire_routine(alerts)
+    if price_error and state["price_failures"] >= MAX_CONSECUTIVE_PRICE_FAILURES:
+        raise RuntimeError(f"Prix indisponibles depuis {state['price_failures']} passages") from price_error
 
 
 def main() -> None:
